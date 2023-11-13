@@ -1,6 +1,18 @@
 
 // import contentUiSkinCss from './tinymce/content.css?inline';
-import contentCss from './assets/content.css?inline';
+// import contentCss from './assets/content.css?inline';
+
+const onload = ()=>{
+  console.log("hello!",tinymce);
+  tinymce.init({
+    selector:'#editor',
+    plugins:'code example',
+    toolbar:'code example',
+    content_css: 'document',
+    language: 'zh-Hant'
+  })
+}
+
 
 export function render (selector) {
   // let init =  {...{}}
@@ -34,3 +46,8 @@ export function render (selector) {
   });
   return x;
 };
+
+
+
+
+window.onload = onload

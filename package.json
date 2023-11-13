@@ -1,27 +1,21 @@
 {
   "name": "youloge.tinymce",
   "private": true,
-  "version": "6.7.2",
+  "version": "6.8.0",
   "type": "module",
   "files": [
     "dist",
     "index.d.ts"
   ],
-  "main": "./dist/tinymce.js",
-  "module": "./dist/tinymce.js",
   "types": "./index.d.ts",
-  "exports": {
-    "types": "./index.d.ts",
-    "import": "./dist/tinymce.js",
-    "require": "./dist/tinymce.js"
-  },
+  "exports": {},
   "scripts": {
-    "dev": "vite",
+    "dev": "cd ./dist && http-server",
     "build": "vite build",
-    "perview":"vite perview"
+    "perview": "vite perview",
+    "vite:dev": "vite"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^25.0.7",
     "terser": "^5.24.0",
     "vite": "^4.3.9"
   }
